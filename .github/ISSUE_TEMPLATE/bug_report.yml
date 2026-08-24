@@ -1,0 +1,48 @@
+name: Bug report
+description: Something in Abstractica isn't working right
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Abstractica version
+      description: Shown in the About dialog.
+      placeholder: e.g. 0.9.9
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows
+        - Linux (x64)
+        - Linux (arm64)
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      placeholder: e.g. macOS 15.5, Windows 11 24H2, Ubuntu 24.04
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Game system in use, screenshots, or error messages you saw.
