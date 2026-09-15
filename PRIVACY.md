@@ -1,6 +1,6 @@
 # Abstractica — Privacy Policy
 
-**Version 1.0 · Effective Septermber 11, 2026**
+**Version 1.0 · Effective September 11, 2026**
 
 This policy explains what happens to personal data when you use **Abstractica**,
 the desktop application published by **Elsewares**, doing business as
@@ -103,7 +103,7 @@ no network requests at all.
 
 ## 5. Data we receive when you buy a license
 
-license keys are sold through **Polar**, which acts as **merchant of record**.
+License keys are sold through **Polar**, which acts as **merchant of record**.
 Polar — not us — collects and processes your name, email address, billing
 address, tax location, and payment details. Polar is the controller for that
 processing; see Polar's own privacy notice at
