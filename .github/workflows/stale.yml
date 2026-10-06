@@ -1,0 +1,28 @@
+name: Close stale needs-info issues
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          only-issue-labels: needs-info
+          days-before-issue-stale: 14
+          days-before-issue-close: 7
+          stale-issue-label: stale
+          stale-issue-message: >
+            This issue is waiting on more information and hasn't had a reply in two weeks.
+            It will close in 7 days unless there's an update — replying will keep it open.
+          close-issue-message: >
+            Closing for lack of the information needed to reproduce. If you're still seeing
+            this, comment with the details and we'll reopen it.
+          days-before-pr-stale: -1
+          days-before-pr-close: -1

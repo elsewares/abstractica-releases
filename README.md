@@ -49,4 +49,7 @@ Abstractica is free to try — the free tier includes one campaign, and [buying 
 
 ## Problems?
 
-[Open an issue](../../issues/new/choose) — please include your Abstractica version (shown in the About dialog) and your operating system.
+- **Found a bug?** [File a bug report](../../issues/new?template=bug_report.yml). The form asks for your Abstractica version (shown in the About dialog) and your operating system.
+- **Have a question or an idea?** Post in [Discussions](../../discussions).
+- **Security problem?** Please [report it privately](../../security/advisories/new). See [SECURITY.md](SECURITY.md).
+- **License or billing?** Email hello@elsewares.io.
