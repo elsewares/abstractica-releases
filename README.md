@@ -6,6 +6,8 @@ This repository is the public home for Abstractica's installers, release notes, 
 
 **[Download the latest release →](https://github.com/elsewares/abstractica-releases/releases/latest)**
 
+**[Read the documentation →](https://docs.abstractica.io)**
+
 ## Choosing your download
 
 | Platform | File |
