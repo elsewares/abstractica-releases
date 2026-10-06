@@ -1,0 +1,53 @@
+---
+title: Abstractica documentation
+description: How to install, play, and extend Abstractica, the editor-centric notebook for solo and journaling tabletop RPG players.
+template: splash
+hero:
+  title: The codex
+  tagline: Write your story and play your game in one document. Here's how every part of Abstractica works.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Get started
+      link: /getting-started/install/
+      icon: right-arrow
+    - text: Download Abstractica
+      link: https://github.com/elsewares/abstractica-releases/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid>
+	<LinkCard
+		title="Getting started"
+		description="Install Abstractica on macOS, Windows, or Linux and start your first campaign."
+		href="/getting-started/install/"
+	/>
+	<LinkCard
+		title="User guide"
+		description="The Chronicle, oracles, moves, dice, generators, clocks, and entities — how every instrument works."
+		href="/guide/chronicle-editor/"
+	/>
+	<LinkCard
+		title="Data format reference"
+		description="How campaigns and journals are stored on your machine, and how to back them up."
+		href="/data/where-your-data-lives/"
+	/>
+	<LinkCard
+		title="System authoring guide"
+		description="Bring your own game: custom oracles, generators, and procedures."
+		href="/authoring/overview/"
+	/>
+	<LinkCard
+		title="Help"
+		description="Troubleshooting, common questions, and how to report a bug."
+		href="/help/troubleshooting/"
+	/>
+	<LinkCard
+		title="Release notes"
+		description="What changed in each version of Abstractica."
+		href="/release-notes/"
+	/>
+</CardGrid>

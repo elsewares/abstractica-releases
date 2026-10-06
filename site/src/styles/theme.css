@@ -1,0 +1,78 @@
+/*
+ * Abstractica docs theme — "Candlelit Notebook", from abstractica-site.
+ *
+ * Dark mode carries the brand: warm near-black surfaces, cream text, one amber
+ * accent. Light mode is the same notebook by daylight: warm paper and ink, with
+ * the amber darkened so links and accents keep their contrast on paper.
+ * Blackletter (Grenze Gotisch) is reserved for the wordmark.
+ */
+
+:root {
+	--sl-font: 'Raleway', ui-sans-serif, system-ui, -apple-system, sans-serif;
+	--sl-font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+
+	/* Dark — surfaces and text */
+	--sl-color-white: #f2ead6;
+	--sl-color-gray-1: #e8ddc8;
+	--sl-color-gray-2: #d2c7b1;
+	--sl-color-gray-3: #9a8f7c;
+	--sl-color-gray-4: #5e5546;
+	--sl-color-gray-5: #2e2820;
+	--sl-color-gray-6: #1a1712;
+	--sl-color-black: #12100d;
+
+	/* Dark — the one accent */
+	--sl-color-accent-low: #3a2c12;
+	--sl-color-accent: #d9a441;
+	--sl-color-accent-high: #f0d29a;
+}
+
+:root[data-theme='light'] {
+	/* Light — paper and ink */
+	--sl-color-white: #1d1913;
+	--sl-color-gray-1: #2a241b;
+	--sl-color-gray-2: #3b342a;
+	--sl-color-gray-3: #62584a;
+	--sl-color-gray-4: #968a77;
+	--sl-color-gray-5: #d6ccb9;
+	--sl-color-gray-6: #ece4d4;
+	--sl-color-gray-7: #f4eee2;
+	--sl-color-black: #faf7ef;
+
+	/* Light — amber, darkened for text on paper */
+	--sl-color-accent-low: #f1e0bb;
+	--sl-color-accent: #8a5d12;
+	--sl-color-accent-high: #5c3d0a;
+}
+
+::selection {
+	background: rgba(217, 164, 65, 0.35);
+}
+
+/* Wordmark */
+.site-title {
+	font-family: 'Grenze Gotisch', serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	letter-spacing: 0;
+	color: var(--sl-color-white);
+}
+
+/* Headings — light weight, as on the marketing site */
+.sl-markdown-content :is(h1, h2),
+h1#_top {
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+/* Splash hero title */
+.hero h1 {
+	font-weight: 400;
+}
+
+/* Notes take the amber accent instead of Starlight's blue */
+.starlight-aside--note {
+	--sl-color-asides-text-accent: var(--sl-color-accent-high);
+	--sl-color-asides-border: var(--sl-color-accent);
+	background-color: color-mix(in srgb, var(--sl-color-accent) 9%, var(--sl-color-black));
+}
