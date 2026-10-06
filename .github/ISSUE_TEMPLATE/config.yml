@@ -6,6 +6,3 @@ contact_links:
   - name: Suggest an idea
     url: https://github.com/elsewares/abstractica-releases/discussions/categories/ideas
     about: Feature requests and wishlist items live in Discussions.
-  - name: Report a security problem
-    url: https://github.com/elsewares/abstractica-releases/security/advisories/new
-    about: Report vulnerabilities privately, not as a public issue.
