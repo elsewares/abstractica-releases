@@ -1,27 +1,31 @@
 # Abstractica — Privacy Policy
 
-**Version 1.0 · Effective September 11, 2026**
+**Version 1.1 · Effective October 14, 2026**
 
 This policy explains what happens to personal data when you use **Abstractica**,
 the desktop application published by **Elsewares**, doing business as
-Elsewares, LLC, of 7010 N Sheridan Road, Chicago, Illinois (**"Elsewares," "we," "us"**). It forms part of the
+Elsewares, LLC, of 7010 N Sheridan Road, Chicago, Illinois (**"Elsewares," "we," "us"**),
+and when you visit its website, **abstractica.io**. It forms part of the
 [End User License Agreement](EULA.md).
 
 ---
 
 ## The short version
 
-- **Abstractica has no accounts, no analytics, and no telemetry.** It does not
+- **The Abstractica application has no accounts, no analytics, and no telemetry.** It does not
   report what you do with it.
 - **Your campaigns, journals, characters, and notes never leave your computer**
   through the Software. We have no copy of them and no way to obtain one.
-- **The only thing the Software sends anywhere is a license check** — your
-  license key and a random identifier — and only if you choose to enter a
-  license key.
+- **The Software sends only two things anywhere:** a license check — your
+  license key and a random identifier — only if you choose to enter a license
+  key; and an update check, which sends nothing about you.
+- **The website counts visits without cookies.** It uses Plausible, an
+  analytics service that never stores your IP address, keeps nothing on your
+  device, and cannot follow you to other sites.
 - **We do not sell or share personal data**, and we do not use it for
   advertising or profiling.
 
-The rest of this policy is the detail behind those four statements.
+The rest of this policy is the detail behind those five statements.
 
 ---
 
@@ -41,8 +45,9 @@ To be explicit, the Software contains:
 - no cloud sync, backup, or upload of your work;
 - no access to your files beyond the data directory you use it with.
 
-Except for the license checks described in Section 4, the Software makes no
-network requests to us or to anyone else.
+Except for the license checks described in Section 4 and the update check
+described in Section 6, the Software makes no network requests to us or to
+anyone else.
 
 ## 3. Data stored on your own device
 
@@ -51,7 +56,7 @@ Abstractica keeps everything locally, and this data is never transmitted:
 | What | Where |
 |---|---|
 | Campaigns, journals, characters, notes, custom sheets, tables, oracles, generators, procedures | Your data directory — by default `~/.abstractica`, or a location you choose |
-| Application settings | Your operating system's application-config directory for `com.abstractica.app` (`settings.json`) |
+| Application settings | Your operating system's application-config directory for `io.abstractica.desktop` (`settings.json`) |
 | Your license key and cached entitlement, if you have one | The same directory (`license.json`) |
 | A random installation identifier (see Section 4) | The same directory, in `settings.json` |
 
@@ -98,8 +103,8 @@ further request to release that activation.
 **Legal basis (UK/EU):** performance of the contract between us (Article 6(1)(b)
 UK/EU GDPR) — we cannot supply a licensed copy without checking the license.
 
-**If you never enter a license key,** none of this happens and the Software makes
-no network requests at all.
+**If you never enter a license key,** none of this happens, and the only request
+the Software makes is the update check described in Section 6.
 
 ## 5. Data we receive when you buy a license
 
@@ -126,13 +131,22 @@ records are deleted after 24 months.
 
 ## 6. Update checks
 
-Current versions of Abstractica do not check for updates. If a future version
-introduces automatic update checking, it will request a small version file from
-the public **[elsewares/abstractica-releases](https://github.com/elsewares/abstractica-releases)**
-repository on GitHub. That request sends no personal data; GitHub, as the host,
-will see the requesting IP address and application version. Downloads are
-cryptographically signature-verified before installation. This policy will be
-updated when that feature ships.
+Each time Abstractica starts, and whenever you ask it to check for updates, it
+requests a small version file from the public
+**[elsewares/abstractica-releases](https://github.com/elsewares/abstractica-releases)**
+repository on GitHub to see whether a newer version exists.
+
+**What is sent:** nothing about you. The request carries no license key, no
+installation identifier, and nothing from your campaigns. GitHub, as the host,
+sees the requesting IP address and ordinary request details.
+
+**If an update is available,** the Software asks before downloading it from the
+same repository, and every download is cryptographically signature-verified
+before it is installed. If the check cannot connect, the Software carries on as
+normal.
+
+**Legal basis (UK/EU):** our legitimate interest in keeping your copy secure and
+up to date (Article 6(1)(f)).
 
 ## 7. Support and correspondence
 
@@ -145,27 +159,72 @@ anything you would not want public.
 
 ## 8. The Abstractica website
 
-The abstractica.io website is a static site. It
-sets no cookies, runs no analytics, and embeds no third-party trackers. Our
-hosting provider keeps standard server access logs, including IP addresses, for
-30 days for security and operations. Clicking "Buy" takes you to a checkout
-page hosted by Polar, which is governed by Polar's own privacy notice.
+**Hosting and delivery.** The abstractica.io website runs on DigitalOcean and is
+delivered through **Cloudflare**, which sits in front of it to speed it up and
+protect it from abuse. Both necessarily see your IP address and ordinary request
+details. Our hosting provider keeps standard server access logs, including IP
+addresses, for 30 days for security and operations. Cloudflare may set
+short-lived, strictly necessary security cookies (such as `__cf_bm`, which
+expires after 30 minutes) to tell people from automated traffic; they are not
+used for analytics or advertising. The website itself sets no cookies.
+
+**Analytics.** We count visits with **Plausible Analytics**, run by
+Plausible Insights OÜ of Tartu, Estonia, so that we can see which pages are read
+and how people find the site. Plausible uses no cookies, stores nothing on your
+device, and does not follow you across other websites. When a page loads, your
+browser sends Plausible:
+
+- the address of the page. Plausible keeps the page's path and discards anything
+  after a `?` except campaign and referral tags such as `utm_source` or `ref`;
+- the address of the page that linked you there, if your browser shares it; and
+- your IP address and your browser's User-Agent string.
+
+From these, Plausible records the page you visited, the site or campaign that
+sent you, your browser, operating system and device type, and an approximate
+location (country, region and city) worked out from your IP address. It also
+records how far down the page you scroll, how long you spend on it, and which
+links to other sites you follow, such as the Buy and download links.
+
+**Your IP address and User-Agent are never stored.** Plausible combines them
+with the site's name and a random value that is deleted every 24 hours, to count
+each visitor once per day. It cannot recognise you on a later day or work out
+who you are. Plausible processes this data on our behalf under its data
+processing agreement and stores it in the European Union. We see only totals,
+and we keep them for as long as we use the service.
+
+**Legal basis (UK/EU):** our legitimate interest in understanding how the site
+is used, so that we can improve it (Article 6(1)(f)).
+
+**If you would rather not be counted,** block `plausible.io` with your
+browser's tracking protection or a content blocker. The site works the same
+without it.
+
+**Buying and the email list.** Clicking "Buy" takes you to a checkout page
+hosted by Polar, which is governed by Polar's own privacy notice. Signing up for
+the email list on the abstractica.io website transmits your email address, the
+page you signed up from, and, for spam screening, your IP address to Buttondown
+(https://buttondown.com), use of which is governed by Buttondown's own privacy
+notice.
 
 ## 9. Service providers
 
 | Provider | Role | What they process |
 |---|---|---|
 | Polar Software Inc. | Merchant of record; license-key issuance and validation | Your purchase details; license key; installation identifier; IP address |
-| DigitalOcean, LLC | Hosts our license-signing function and the private storage bucket for purchase records | license key and installation identifier in transit; stored purchase-event records; IP address |
-| GitHub, Inc. | Hosts public downloads, the issue tracker, and (in future) the update feed | IP address and request metadata when you download or check for updates; anything you post to the tracker |
+| DigitalOcean, LLC | Hosts the abstractica.io website, our license-signing function, and the private storage bucket for purchase records | Website server logs, including IP address; license key and installation identifier in transit; stored purchase-event records; IP address |
+| Cloudflare, Inc. | Delivers the abstractica.io website and protects it from abuse | IP address and request metadata; short-lived security cookies |
+| Plausible Insights OÜ | Counts visits to the abstractica.io website | Page addresses, referrers, campaign and referral tags, browser, operating system and device type, approximate location, scroll depth, time on page, and clicks on links to other sites; IP address and User-Agent in transit only, never stored |
+| Buttondown | Sends the Abstractica email list you sign up for on the website | Your email address; the page you signed up from; IP address (for spam screening) |
+| GitHub, Inc. | Hosts public downloads, the update feed, and the issue tracker | IP address and request metadata when you download or check for updates; anything you post to the tracker |
 
 We do not sell personal data, we do not share it for cross-context behavioural
-advertising, and we use no advertising or analytics providers.
+advertising, and we use no advertising providers. Our only analytics provider is
+Plausible, for the website, as described in Section 8.
 
 ## 10. International transfers
 
 We are based in the United States, and the providers above process data in the United
-States and other countries. Where personal data of people in the UK, EEA, or
+States and other countries; Plausible stores website analytics in the European Union. Where personal data of people in the UK, EEA, or
 Switzerland is transferred outside those areas, the transfer relies on the
 European Commission's Standard Contractual Clauses (and the UK Addendum where
 applicable) as incorporated in our agreements with those providers.
@@ -182,6 +241,10 @@ month. We will not discriminate against you for making a request. Note that we
 identify purchase records by email address, so a request will normally need to
 come from — or reference — the address used at checkout.
 
+**Website analytics** (Section 8) cannot be tied to you, so we cannot find,
+export, or delete your share of it on request. Section 8 explains how to stop it
+being collected.
+
 **If you are in the UK or EEA,** you may also complain to your national data
 protection authority (in the UK, the Information Commissioner's Office,
 `ico.org.uk`).
@@ -190,7 +253,7 @@ protection authority (in the UK, the Information Commissioner's Office,
 information as those terms are defined in the CCPA/CPRA, and we do not process
 sensitive personal information for the purpose of inferring characteristics. The
 categories we collect are identifiers and commercial information, as described
-in Section 5.
+in Section 5. Website analytics is deidentified, and we do not attempt to re-identify it.
 
 ## 12. Children
 
@@ -215,6 +278,10 @@ We may update this policy. The version number and effective date at the top will
 change, and the current version is always published at
 **https://abstractica.io/privacy**. Where a change materially affects how we handle data
 already collected, we will say so prominently and, where required, seek consent.
+
+**Version 1.1 (October 14, 2026)** added the website's analytics (Plausible) and
+Cloudflare to Section 8, and replaced Section 6, which said Abstractica did not
+yet check for updates; it has done so since version 0.9.16.
 
 ## 15. Contact
 
