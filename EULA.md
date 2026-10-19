@@ -1,6 +1,6 @@
 # Abstractica — End User License Agreement
 
-**Version 1.0 · Effective September 11, 2026**
+**Version 1.1 · Effective October 19, 2026**
 
 This End User License Agreement (the **"Agreement"**) is a binding contract
 between you (**"you"**) and **Elsewares**, doing business as
@@ -126,12 +126,14 @@ materials remain the property of their respective owners and are provided to you
 under their own licenses, which are reproduced in the Software's distribution and
 in the accompanying notices. They include, without limitation:
 
-- **Ironsworn** game content by Shawn Tomkin, adapted from the Datasworn data set
-  under Creative Commons Attribution 4.0 International (CC BY 4.0).
+- **Ironsworn** game content by Shawn Tomkin, including Ironsworn: Delve and
+  Sundered Isles, adapted from the Datasworn data set: moves, assets, oracles
+  and tables under Creative Commons Attribution 4.0 International (CC BY 4.0),
+  and foes and anomalies under Creative Commons
+  Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
 - **Ironsworn: Starforged** game content by Shawn Tomkin: material from the
   Reference Guide and Asset Cards under CC BY 4.0, and material from the
-  rulebook (setting truths and related content) under Creative Commons
-  Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+  rulebook (setting truths and related content) under CC BY-NC-SA 4.0.
   Elsewares distributes the Ironsworn and Ironsworn: Starforged content in the
   Software with Shawn Tomkin's written permission.
 - **Blades in the Dark** derived content, based on the work of John Harper
