@@ -132,6 +132,8 @@ in the accompanying notices. They include, without limitation:
   Reference Guide and Asset Cards under CC BY 4.0, and material from the
   rulebook (setting truths and related content) under Creative Commons
   Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+  Elsewares distributes the Ironsworn and Ironsworn: Starforged content in the
+  Software with Shawn Tomkin's written permission.
 - **Blades in the Dark** derived content, based on the work of John Harper
   (One Seven Design) under Creative Commons Attribution 3.0 (CC BY 3.0).
 - **Typefaces** licensed under the SIL Open Font License 1.1 and other font
@@ -144,8 +146,9 @@ trademarks are the property of their respective owners and are used to identify
 compatible content.
 
 Your rights in that third-party content are those the applicable third-party
-license gives you. In particular, content carrying a NonCommercial or ShareAlike
-term is subject to those terms in your hands as well as ours.
+license gives you. Permission granted to Elsewares is personal to Elsewares and
+does not extend to you; in particular, content carrying a NonCommercial or
+ShareAlike term remains subject to those terms in your hands.
 
 ## 7. Updates
 
@@ -172,7 +175,7 @@ change for future purchases.
 ## 10. Refunds and revocation
 
 Refund requests are handled through Polar in accordance with Polar's refund
-process and any statutory right of withdrawal that applies to you. 
+process and any statutory right of withdrawal that applies to you.
 We honor refund requests made within 14 days of purchase.
 
 If a purchase is refunded, charged back, or otherwise reversed, the associated
