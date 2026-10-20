@@ -1,0 +1,170 @@
+---
+title: Installing Abstractica
+description: Download and install Abstractica on macOS, Windows, or Linux, keep it up to date, and remove it.
+sidebar:
+  order: 1
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Abstractica is a desktop app for macOS, Windows, and Linux. Every version is on the
+[releases page](https://github.com/elsewares/abstractica-releases/releases/latest).
+You download the installer once, and after that Abstractica updates itself.
+
+## What you need
+
+| System | Requirement |
+|---|---|
+| macOS | macOS 13 Ventura or later, on an Apple Silicon or Intel Mac |
+| Windows | Windows 10 or 11, 64-bit (x64) |
+| Linux | x64 or arm64, with WebKitGTK 4.1: Ubuntu 22.04, Debian 12, Fedora 36, or later |
+
+The window needs at least 900 × 600 pixels of screen space.
+
+## Choosing your download
+
+Open the [latest release](https://github.com/elsewares/abstractica-releases/releases/latest)
+and pick the file for your computer from the **Assets** list. `<version>` stands for the version number.
+
+| Your computer | Download |
+|---|---|
+| Mac with Apple Silicon (M1 or later) | `Abstractica_<version>_aarch64.dmg` |
+| Mac with an Intel processor | `Abstractica_<version>_x64.dmg` |
+| Windows 10 or 11 | `Abstractica_<version>_x64-setup.exe` |
+| Linux x64 — Debian, Ubuntu | `Abstractica_<version>_amd64.deb` |
+| Linux x64 — Fedora, openSUSE | `Abstractica-<version>-1.x86_64.rpm` |
+| Linux x64 — any distribution | `Abstractica_<version>_amd64.AppImage` |
+| Linux arm64 — Debian, Ubuntu | `Abstractica_<version>_arm64.deb` |
+| Linux arm64 — Fedora | `Abstractica-<version>-1.aarch64.rpm` |
+| Linux arm64 — any distribution | `Abstractica_<version>_aarch64.AppImage` |
+
+The other files on the release (`.app.tar.gz`, `.sig`, `latest.json`) belong to the
+automatic updater. You never need to download them.
+
+:::tip[Which Mac do I have?]
+Open the Apple menu → **About This Mac**. If it lists a **Chip** such as Apple M2,
+download the `aarch64` file. If it lists a **Processor** such as Intel Core i5, download the `x64` file.
+:::
+
+## Installing
+
+<Tabs syncKey="os">
+<TabItem label="macOS">
+
+1. Open the `.dmg` file.
+2. Drag **Abstractica** into your **Applications** folder.
+3. Open Abstractica from Applications or Launchpad.
+
+Abstractica is signed and notarized by Apple, so it opens like any other app.
+
+</TabItem>
+<TabItem label="Windows">
+
+1. Run `Abstractica_<version>_x64-setup.exe`.
+2. Choose whether to install Abstractica for yourself or for everyone on this computer, and finish the installer.
+
+The installer is code-signed, but Windows SmartScreen may still show **Windows protected
+your PC** while the signing certificate builds its reputation. Click **More info**, then
+**Run anyway**.
+
+Abstractica uses Microsoft's WebView2 runtime. Windows 10 and 11 usually have it already; if
+not, the installer downloads it, so stay online while you install.
+
+</TabItem>
+<TabItem label="Linux">
+
+Install from a terminal in the folder you downloaded to.
+
+**Debian or Ubuntu (`.deb`)** — `apt` installs WebKitGTK for you if it's missing:
+
+```bash
+sudo apt install ./Abstractica_<version>_amd64.deb
+```
+
+**Fedora or openSUSE (`.rpm`):**
+
+```bash
+sudo dnf install ./Abstractica-<version>-1.x86_64.rpm
+```
+
+**AppImage** — no installation; make it executable and run it:
+
+```bash
+chmod +x Abstractica_<version>_amd64.AppImage
+./Abstractica_<version>_amd64.AppImage
+```
+
+On arm64, use the `arm64` or `aarch64` file names from the table above.
+
+</TabItem>
+</Tabs>
+
+## Updates
+
+Each time Abstractica starts, it checks for a new version. If there is one, it asks first:
+**Update Available** names the new version and the one you have, with **Install Update** and
+**Later**. After installing, it offers to restart. On Windows, the installer closes
+Abstractica itself while it runs.
+
+You can't turn the check off, but nothing installs until you choose **Install Update**.
+
+To check by hand:
+
+- **macOS:** Abstractica menu → **Check for Updates…**
+- **Windows and Linux:** **Help** → **Check for Updates…**
+- **Anywhere:** open Abstractica Help (the **Help** button in the status bar) and choose **Check for Updates…** at the bottom.
+
+:::note[Linux .deb and .rpm installs]
+A package installed through `apt` or `dnf` can't update itself. When a new version is out,
+Abstractica tells you and offers to open the downloads page; install the new package the same
+way you installed the first one. AppImages update themselves.
+:::
+
+## Finding your version
+
+Open **About Abstractica** — on macOS from the Abstractica menu, on Windows and Linux from the
+**Help** menu. It shows your version, whether this computer is licensed, and a device ID.
+
+## Uninstalling
+
+Removing the app leaves your campaigns where they are, in the `.abstractica` folder in your
+home folder. If this computer is licensed, choose **Deactivate on this device** first (see
+[Free and licensed](/getting-started/free-and-licensed/#moving-to-another-computer)) so you
+can use the activation elsewhere.
+
+<Tabs syncKey="os">
+<TabItem label="macOS">
+
+Quit Abstractica, then drag it from **Applications** to the Trash.
+
+</TabItem>
+<TabItem label="Windows">
+
+Open **Settings** → **Apps** → **Installed apps**, find **Abstractica**, and choose **Uninstall**.
+
+</TabItem>
+<TabItem label="Linux">
+
+```bash
+sudo apt remove abstractica    # Debian or Ubuntu
+sudo dnf remove abstractica    # Fedora or openSUSE
+```
+
+For an AppImage, delete the file.
+
+</TabItem>
+</Tabs>
+
+To remove everything Abstractica stored, also delete:
+
+- **Your campaigns and preferences:** the `.abstractica` folder in your home folder
+  (`~/.abstractica`, or `C:\Users\<you>\.abstractica` on Windows), or the folder you chose
+  in **Settings** → **Abstractica Data Directory**.
+- **Your license and app settings:**
+  - macOS: `~/Library/Application Support/io.abstractica.desktop`
+  - Windows: `%APPDATA%\io.abstractica.desktop`
+  - Linux: `~/.config/io.abstractica.desktop`
+
+:::caution
+Deleting the `.abstractica` folder deletes your campaigns. There is no undo.
+:::

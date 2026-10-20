@@ -81,12 +81,9 @@ body:
       label: Game system in use
       options:
         - Not specific to a game system
-        - "Ironsworn"
-        - "Ironsworn: Delve"
-        - "Ironsworn: Starforged"
-        - Sundered Isles
-        - Mörk Borg
-        - Abstractica (sandbox)
+        - Ironsworn
+        - Starforged
+        - Abstractica
         - Custom / other
   - type: textarea
     id: what-happened
