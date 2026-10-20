@@ -1,0 +1,93 @@
+---
+title: Free and licensed
+description: What the free version includes, how to buy and activate a license, and how to move it between computers.
+sidebar:
+  order: 3
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+Abstractica is free to use with one campaign. A license removes that limit. Nothing else
+differs: every game system, tool, and oracle is in the free version.
+
+## The free version
+
+- One campaign, with as many sessions as you like.
+- No account, no time limit, no trial period.
+
+When you have one campaign, the **Begin New Campaign** button on the campaign list is replaced
+by *The free version supports one campaign*, with **Buy a license →** and
+**Enter a license key**.
+
+Deleting your campaign frees the slot, but deletion is permanent — the campaign and everything
+in it is gone.
+
+## What a license gets you
+
+- Unlimited campaigns.
+- Use on **2 computers** at once.
+- A one-time purchase — no subscription.
+
+Buy one from **Buy a license →** in the app, or from
+[Polar's checkout](https://buy.polar.sh/polar_cl_h6pAT8oXy3Z7b7ayAzWNFyBzzDKmAXTPOzOpW2dFPGl).
+Polar handles the payment and emails your key; the price is shown at checkout and on
+[abstractica.io](https://abstractica.io). Refunds are available within 14 days of purchase —
+see the [EULA](https://github.com/elsewares/abstractica-releases/blob/main/EULA.md).
+
+## Activating your license
+
+You need an internet connection to activate.
+
+<Steps>
+
+1. Open **Settings**: Abstractica menu → **Settings…** (⌘,) on macOS; **File** → **Settings…**
+   (Ctrl+,) on Windows and Linux. From the campaign list you can also click **Enter a license key**.
+2. In the **License** section, paste your key. It looks like `ABST-XXXX-XXXX-XXXX`.
+3. Click **Activate**.
+
+</Steps>
+
+You'll see *License activated. Thank you!*, and the License section then reads
+*This device is licensed*, followed by the last characters of your key. Your existing campaign
+stays as it was; you can now create more.
+
+If activation fails, the message under the key field says why. See
+[Troubleshooting → License problems](/help/troubleshooting/#license-problems).
+
+## Playing offline
+
+Once activated, Abstractica doesn't need the internet to run. It re-checks your license when
+it starts, if the last successful check was more than 7 days ago and you're online.
+
+If it can't reach the licensing service for a long stretch:
+
+- Your license stays valid for **30 days** after the last successful check.
+- Then comes a **14-day grace period**. Abstractica shows *Reconnect to the internet to reverify
+  your license* at startup and in Settings, and everything still works.
+- After that, Abstractica treats this computer as free: your campaigns stay and remain editable,
+  but you can't create new ones. Your key is kept, so going back online and choosing
+  **Reactivate** in Settings restores the license.
+
+## Moving to another computer
+
+Your license follows the computer, not your files. Copying your `.abstractica` folder moves your
+campaigns but not your license.
+
+<Steps>
+
+1. On the old computer, open **Settings** → **License** and click **Deactivate on this device**.
+2. On the new computer, install Abstractica and [activate](#activating-your-license) with the same key.
+
+</Steps>
+
+If the old computer is lost or broken, release it from the
+[Polar customer portal](https://polar.sh/elsewares/portal): sign in with the email you bought
+with and deactivate the old device there.
+
+To move your campaigns too, see the [FAQ](/help/faq/#how-do-i-move-to-a-new-computer).
+
+## Lost your key
+
+Sign in to the [Polar customer portal](https://polar.sh/elsewares/portal) with the email you
+bought with; your key is listed there. For anything else about purchases, email
+**hello@elsewares.io**.
