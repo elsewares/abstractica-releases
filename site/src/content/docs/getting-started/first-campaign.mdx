@@ -1,0 +1,140 @@
+---
+title: Your first campaign
+description: Create a campaign, set it up, and write your first scene with slash commands.
+sidebar:
+  order: 2
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+A campaign is one game: its characters, its sessions, and everything you rolled along the way.
+This page takes you from a fresh install to your first scene.
+
+## Words that change with the game
+
+Abstractica uses each game's own vocabulary, so some buttons read differently depending on the
+system. These docs say *campaign* and *session*; here is what each system calls them.
+
+| Game system | A campaign is a… | A session is a… | People and places are kept in the… |
+|---|---|---|---|
+| Ironsworn | Saga | Entry | Codex |
+| Starforged | Campaign | Log | Databank |
+| Abstractica | Chronicle | Entry | Cast |
+
+A few labels stay the same everywhere: **End Session**, **Campaign settings**, and the
+**Entities** tab.
+
+## Create a campaign
+
+<Steps>
+
+1. Open Abstractica. The first screen lists your campaigns; on a fresh install it says
+   **No campaigns yet.**
+
+2. Click **Begin New Campaign**.
+
+3. Fill in the form:
+
+   - **Name** — required.
+   - **Description** — optional.
+   - **Game System** — **Ironsworn**, **Starforged**, or **Abstractica**, a system-neutral
+     sandbox for any game you play. The screen takes on the system's look as you switch.
+   - **Include Abstractica Content** — Abstractica's own oracles and tables, added on top of
+     Ironsworn or Starforged. It's on by default; Abstractica campaigns always include it.
+   - **Oracle theme** — the genre Abstractica's themed oracles answer in: **Low Fantasy** or
+     **High Fantasy** for Ironsworn, **Space Opera** or **Cyberpunk** for Starforged, any of the
+     four for Abstractica. You can change it later in **Campaign settings**.
+   - **Character sheet** — Abstractica campaigns only. Pick a sheet, or **Edit** one or make a
+     **New sheet**.
+
+4. Click **Create**.
+
+</Steps>
+
+:::note
+The free version holds one campaign. See [Free and licensed](/getting-started/free-and-licensed/).
+:::
+
+## Set up before you play
+
+A new campaign opens on **The Chronicle** with a short checklist: *A few things to settle before you begin.*
+
+- **Create your character** — required. Opens the character creation window for your system.
+- **Settle your truths** — Starforged only. Truths are the big facts of your setting; choose
+  each one, or click **Decide these later**.
+- **Take the tour** — optional. **Show me** walks you through the screen; **No thanks** skips it.
+
+When the required steps are done, click **Create First Session**. Abstractica names it
+*Session 1* (or *Entry 1*, *Log 1*) and opens it.
+
+## The session screen
+
+- **Top:** the session title, an **End Session** button, and a toggle for details such as
+  in-world date, mood, and tags.
+- **Middle:** the Chronicle — the editor where you write. Below the toolbar, a strip of scenes
+  lets you jump between them.
+- **Left:** your sessions, with **+ New** to start another, and your character.
+- **Right:** the tools sidebar: Entities, Moves, Oracle, Tables, and Dice in every system;
+  Generators & Procedures when your campaign has any; Clocks and Decks in Abstractica
+  campaigns; Truths in Starforged.
+- **Bottom:** the status bar, with save state, word count, and **Help**.
+
+Abstractica saves about 5 seconds after you stop typing. The status bar shows **Saved**,
+**Saving…**, or **Unsaved changes**.
+
+## Write your first scene
+
+Write the way you would in any editor. When the story needs the game, type `/` at the start of
+a line, or after a space, to open the command menu.
+
+<Steps>
+
+1. Type `/` and start typing a command name. The list narrows as you type.
+2. Use the arrow keys to move through it, and press **Enter** or **Tab** to choose. **Esc** closes the menu.
+3. Fill in the small form that appears — which oracle, which move, which dice — and the result
+   lands in your text as a block.
+
+</Steps>
+
+An **oracle** is a table of answers you consult when you don't know what happens next: it plays
+the part of the game master. Try `/oracle` first.
+
+| Command | What it does | Available in |
+|---|---|---|
+| `/scene` | Starts a new scene, with an optional title | All systems |
+| `/oracle` | Asks an oracle | All systems |
+| `/table` | Rolls on a table | All systems |
+| `/roll` | Rolls dice, such as `/roll 2d10` | All systems |
+| `/move` (or `/m`) | Makes a move and rolls it | All systems |
+| `/progress` (or `/track`) | Adds a progress track | All systems |
+| `/entity` (or `/mention`) | Inserts a person, place, or thing | All systems |
+| `/asset` | Inserts an asset card | All systems |
+| `/generator` (or `/gen`), `/procedure` (or `/proc`), `/loop` | Runs a generator or procedure | Campaigns that have generators or procedures |
+| `/vow` (or `/swear`) | Swears an iron vow | Ironsworn, Starforged |
+| `/clock`, `/timer` | Adds a clock or timer | Abstractica |
+| `/deck` (or `/draw`) | Draws from a deck | Abstractica |
+
+Two more shortcuts:
+
+- Type `@` to mention an entity — a character, place, or faction you've recorded.
+- Click **+** at the end of the scene strip to start a new scene without typing `/scene`.
+
+The sidebar tools do the same jobs. Use whichever suits you; a slash command puts its result
+straight into your text.
+
+## Ending a session
+
+When you're done for the evening, you can leave the session open and come back to it —
+Abstractica reopens your campaign at the last session.
+
+**End Session** closes the session for good: it becomes read-only, and this can't be undone.
+Start the next one with **+ New** in the left panel.
+
+## Getting around
+
+- **Settings:** Abstractica menu → **Settings…** (⌘,) on macOS; **File** → **Settings…** (Ctrl+,)
+  on Windows and Linux; or the gear on the campaign list.
+- **Help:** **Help** → **Abstractica Help** (F1 on Windows and Linux, ⇧⌘/ on macOS), or the
+  **Help** button in the status bar. It lists every slash command and panel, with search.
+- **Tours:** replay any guided tour from **Settings** → **Tutorials**.
+- **Back to your campaigns:** the **←** link at the top of the left panel.
