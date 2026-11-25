@@ -46,7 +46,9 @@ Abstractica is free to try — the free tier includes one campaign, and [buying 
 
 ### Third-party content
 
-- **Ironsworn**, **Ironsworn: Delve**, **Ironsworn: Starforged**, and **Sundered Isles** by Shawn Tomkin — content included via the [Datasworn](https://github.com/rsek/datasworn) project. Ironsworn content is used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); portions of Delve, Starforged, and Sundered Isles content are used under CC BY‑NC / [CC BY‑NC‑SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) terms.
+- **Ironsworn** and **Ironsworn: Delve** by Shawn Tomkin, included with his written permission. Game data adapted from [Datasworn](https://github.com/rsek/datasworn) by rsek. Moves, assets, oracles and tables are used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); foes, anomalies and setting truths under [CC BY‑NC‑SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- **Ironsworn: Starforged** by Shawn Tomkin, included with his written permission. Reference Guide and Asset Cards content is used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); rulebook content (setting truths and scene challenges) under [CC BY‑NC‑SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- Abstractica is an independent product and is not affiliated with or endorsed by Shawn Tomkin.
 - Other bundled game content is used under its respective licenses, credited in the app.
 
 ## Problems?
